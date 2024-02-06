@@ -1,0 +1,14 @@
+F:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.exe.config
+F:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.exe
+F:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.pdb
+F:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.csproj.CoreCompileInputs.cache
+F:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.exe
+F:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.pdb
+F:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.csproj.AssemblyReference.cache
+G:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.exe.config
+G:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.exe
+G:\KamaProject\Helper\AllInOne\AllInOneScript\bin\Debug\AllInOneScript.pdb
+G:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.csproj.AssemblyReference.cache
+G:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.csproj.CoreCompileInputs.cache
+G:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.exe
+G:\KamaProject\Helper\AllInOne\AllInOneScript\obj\Debug\AllInOneScript.pdb

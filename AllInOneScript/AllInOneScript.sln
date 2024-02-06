@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllInOneScript", "AllInOneScript.csproj", "{DAE170DB-1FBC-4C63-8614-7B49668779DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExportAllQuery", "..\ExportAllQuery\ExportAllQuery.csproj", "{F53C0AC7-830B-4DDD-9B15-214A7F43C8D0}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ExportQuery", "..\ExportQuery\ExportQuery.vdproj", "{6A3AE044-E727-4382-AEB9-D8F4A0E20B1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAE170DB-1FBC-4C63-8614-7B49668779DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE170DB-1FBC-4C63-8614-7B49668779DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE170DB-1FBC-4C63-8614-7B49668779DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE170DB-1FBC-4C63-8614-7B49668779DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53C0AC7-830B-4DDD-9B15-214A7F43C8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53C0AC7-830B-4DDD-9B15-214A7F43C8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53C0AC7-830B-4DDD-9B15-214A7F43C8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53C0AC7-830B-4DDD-9B15-214A7F43C8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3AE044-E727-4382-AEB9-D8F4A0E20B1E}.Debug|Any CPU.ActiveCfg = Debug
+		{6A3AE044-E727-4382-AEB9-D8F4A0E20B1E}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEB454AF-1447-4AE5-A330-58EF8FBF35BB}
+	EndGlobalSection
+EndGlobal

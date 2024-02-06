@@ -1,0 +1,14 @@
+G:\KamaProject\Helper\AllInOne\ExportAllQuery.exe
+G:\KamaProject\Helper\AllInOne\ExportAllQuery.dll
+G:\KamaProject\Helper\AllInOne\ExportAllQuery.deps.json
+G:\KamaProject\Helper\AllInOne\ExportAllQuery.runtimeconfig.json
+G:\KamaProject\Helper\AllInOne\ExportAllQuery.pdb
+G:\KamaProject\Helper\AllInOne\BouncyCastle.Cryptography.dll
+G:\KamaProject\Helper\AllInOne\DocuSign.eSign.dll
+G:\KamaProject\Helper\AllInOne\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\KamaProject\Helper\AllInOne\Microsoft.IdentityModel.Logging.dll
+G:\KamaProject\Helper\AllInOne\Microsoft.IdentityModel.Protocols.dll
+G:\KamaProject\Helper\AllInOne\Microsoft.IdentityModel.Tokens.dll
+G:\KamaProject\Helper\AllInOne\Newtonsoft.Json.dll
+G:\KamaProject\Helper\AllInOne\Ookii.Dialogs.Wpf.dll
+G:\KamaProject\Helper\AllInOne\System.IdentityModel.Tokens.Jwt.dll
