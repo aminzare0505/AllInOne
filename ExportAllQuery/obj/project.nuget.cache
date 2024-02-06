@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yhQycTOYa18jqohd8KRjwy3yHURNbwsLZLVxS9dLtdy1TETu4j7ZW4admuiU6yZU1ozqbVbxjJbFrIE6fbJTBQ==",
+  "dgSpecHash": "+i/2SI4U8gI8a+8N/VR4y4Ddsah4a87XdqBjGnyHkmfG2CfwIHPGeuex9H8qCTz/wTZdwyQw5cRLceA4hUvUfA==",
   "success": true,
-  "projectFilePath": "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
+  "projectFilePath": "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amin\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Amin\\.nuget\\packages\\docusign.esign.dll\\6.8.0\\docusign.esign.dll.6.8.0.nupkg.sha512",

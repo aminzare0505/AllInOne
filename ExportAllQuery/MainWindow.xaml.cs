@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using DocuSign.eSign.Model;
+using System.IO;
 using System.Windows;
+using System.Windows.Forms;
 using Timer = System.Timers.Timer;
 
 namespace ExportAllQuery
@@ -35,7 +37,7 @@ namespace ExportAllQuery
 
         }
 
-        private async void button1_Click(object sender, RoutedEventArgs e)
+        private async void Browse_Click(object sender, RoutedEventArgs e)
         {
             // this is based on https://www.antoniovalentini.com/how-to-handle-file-and- folder-dialog-windows-in-a-wpf-application/
 
@@ -48,12 +50,14 @@ namespace ExportAllQuery
                 var progress = new Progress<int>(x => ProgressBarLoading.Value = x);
 
                 string filePath = ookiiDialog.SelectedPath;
-                textBox1.Text = ookiiDialog.SelectedPath;
+                PathTextBox.Text = ookiiDialog.SelectedPath;
                 WorkerClass worker = new WorkerClass();
-                ExportResult.Text= await Task.Run(() => worker.doSomething(filePath, progress));
+              var Result=await Task.Run(() => worker.doSomething(filePath, progress));
+                ExportResult.Text = Result;
+                if (string.IsNullOrEmpty(Result))
+                    ProgressBarLoading.Value = 0;
+                else
                 ProgressBarLoading.Value = 100;
-                //progressBar.Value = 100;
-                //ProgressBarLoading.Value += 10;
 
 
                 string path = ookiiDialog.SelectedPath;
@@ -67,42 +71,51 @@ namespace ExportAllQuery
             {
                 DirectoryInfo di = new DirectoryInfo(filePath);
                 FileInfo[] fileInfos = di.GetFiles("*.sql", SearchOption.AllDirectories);
-                string script = "";
-                bool First = true;
-                var per = fileInfos.Length / 9;
-                progress.Report(5);
-                int Counter = 0;
-                foreach (var fileInfo in fileInfos)
+                if(fileInfos==null || fileInfos.Length == 0)
                 {
-                    
-                  if(Counter== per)
-                        progress.Report(15);
-                    if (Counter == (per*2))
-                        progress.Report(25);
-                    if (Counter == (per * 3))
-                        progress.Report(35);
-                    if (Counter == (per * 4))
-                        progress.Report(45);
-                    if (Counter == (per * 5))
-                        progress.Report(55);
-                    if (Counter == (per * 6))
-                        progress.Report(65);
-                    if (Counter == (per * 7))
-                        progress.Report(75);
-                    if (Counter == (per * 8))
-                        progress.Report(85);
-                    if (Counter == (per * 9))
-                        progress.Report(95);
-                    // ProgressBarLoading.Value += ProgressBarValue;
-                    if (First)
-                        script += fileInfo.OpenText().ReadToEnd();
-                    else
-                        script += "\n" + "GO" + "\n" + fileInfo.OpenText().ReadToEnd();
-                    First = false;
-                    Counter++;
+                    System.Windows.Forms.MessageBox.Show("فایلی با پسوند .sql  برای پردازش یافت نشد.");
+                    return string.Empty;
+                }
+                else
+                {
+                    string script = "";
+                    bool First = true;
+                    var per = fileInfos.Length / 9;
+                    progress.Report(5);
+                    int Counter = 0;
+                    foreach (var fileInfo in fileInfos)
+                    {
+
+                        if (Counter == per)
+                            progress.Report(15);
+                        if (Counter == (per * 2))
+                            progress.Report(25);
+                        if (Counter == (per * 3))
+                            progress.Report(35);
+                        if (Counter == (per * 4))
+                            progress.Report(45);
+                        if (Counter == (per * 5))
+                            progress.Report(55);
+                        if (Counter == (per * 6))
+                            progress.Report(65);
+                        if (Counter == (per * 7))
+                            progress.Report(75);
+                        if (Counter == (per * 8))
+                            progress.Report(85);
+                        if (Counter == (per * 9))
+                            progress.Report(95);
+                        // ProgressBarLoading.Value += ProgressBarValue;
+                        if (First)
+                            script += fileInfo.OpenText().ReadToEnd();
+                        else
+                            script += "\n" + "GO" + "\n" + fileInfo.OpenText().ReadToEnd();
+                        First = false;
+                        Counter++;
+                    }
+
+                    return script;
                 }
                 
-                return script;
                 //using (var package = new Package(filePath))
                 //{
                 //    foreach (var item in package)
@@ -113,6 +126,45 @@ namespace ExportAllQuery
                 //}
             }
         }
+       
+        private void ExportResult_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+            var ookiiDialog = new Ookii.Dialogs.Wpf.VistaSaveFileDialog();
+            if (ookiiDialog.ShowDialog() == true)
+            {
+                var FileName = ookiiDialog.FileName;
+                var path = ookiiDialog.InitialDirectory;
+
+                new Export().Save("", ExportResult.Text);
+            }
+        }
+
+        private void SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(ExportResult.Text))
+            {
+                System.Windows.Forms.MessageBox.Show("اسکریپتی برای ذخیره کردن وجود ندارد.");
+            }
+            else
+            {
+                var ookiiDialog = new Ookii.Dialogs.Wpf.VistaSaveFileDialog();
+                if (ookiiDialog.ShowDialog() == true)
+                {
+                    var FileName = ookiiDialog.FileName;
+                    var path = ookiiDialog.InitialDirectory;
+                    if (!string.IsNullOrWhiteSpace(ExportResult.Text))
+                    {
+                        new Export().Save(FileName, ExportResult.Text);
+                        System.Windows.Forms.MessageBox.Show($" فایل با موفقیت در مسیر زیر ذخیره شد\n {FileName}");
+                    }
+
+                    else
+                        System.Windows.Forms.MessageBox.Show("اسکریپتی برای ذخیره کردن وجود ندارد.");
+                }
+            }
+           
+        }
+
         //private void Window_ContentRendered(object sender, EventArgs e)
         //{
         //    BackgroundWorker worker = new BackgroundWorker();
@@ -136,29 +188,6 @@ namespace ExportAllQuery
         //{
         //    progressBar.Value = e.ProgressPercentage;
         //}
-        private void ExportResult_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-            var ookiiDialog = new Ookii.Dialogs.Wpf.VistaSaveFileDialog();
-            if (ookiiDialog.ShowDialog() == true)
-            {
-                var FileName = ookiiDialog.FileName;
-                var path = ookiiDialog.InitialDirectory;
-
-                new Export().Save("", ExportResult.Text);
-            }
-        }
-
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            var ookiiDialog = new Ookii.Dialogs.Wpf.VistaSaveFileDialog();
-            if (ookiiDialog.ShowDialog() == true)
-            {
-                var FileName = ookiiDialog.FileName;
-                var path = ookiiDialog.InitialDirectory;
-
-                new Export().Save(FileName, ExportResult.Text);
-            }
-        }
         //FolderItem ShellBrowseForFolder()
         //{
         //    Folder folder = shell.BrowseForFolder(Hwnd, "", 0, 0);

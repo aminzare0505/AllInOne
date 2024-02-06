@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExportAllQuery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de2907dbb3c8bb1315f341f912dabbe76d2549c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExportAllQuery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExportAllQuery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

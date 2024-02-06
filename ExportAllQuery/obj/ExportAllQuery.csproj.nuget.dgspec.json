@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj": {}
+    "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj": {}
   },
   "projects": {
-    "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj": {
+    "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
+        "projectUniqueName": "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
         "projectName": "ExportAllQuery",
-        "projectPath": "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
+        "projectPath": "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\ExportAllQuery.csproj",
         "packagesPath": "C:\\Users\\Amin\\.nuget\\packages\\",
-        "outputPath": "G:\\KamaProject\\Helper\\AllInOne\\ExportAllQuery\\obj\\",
+        "outputPath": "G:\\KamaProject\\Helper\\AllInOne\\AllInOne\\ExportAllQuery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amin\\AppData\\Roaming\\NuGet\\NuGet.Config",
